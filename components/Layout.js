@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 
 export default function Layout({children}) {
   const { data: session } = useSession();
+  
   if (!session) {
     return (
       <div className={"bg-blue-900 w-screen h-screen flex items-center"}>
@@ -16,7 +17,7 @@ export default function Layout({children}) {
     <div className={"bg-blue-900 w-screen h-screen flex"}>
       <Nav />
       <div className="bg-white flex-grow mt-2 mr-2 mb-2 rounded-lg p-4">
-            <h1>{children}</h1>
+            <div>{children}</div>
       </div>
     </div>
   );
